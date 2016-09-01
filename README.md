@@ -19,6 +19,7 @@
 └── public
     ├── 404.jade
     ├── _data.json
+    ├── _layout-inner.jade
     ├── _layout.jade
     ├── _less
     ├── _partial/
