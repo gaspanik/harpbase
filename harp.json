@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "sitename": "web site name",
+    "title": "web page title | global",
+    "description": "web page descripton | global",
+    "domain": "example.com",
+    "uri": "http://example.com/",
+    "slug": "index.html",
+    "ogimage": "http://example.com/images/ogp.jpg",
+    "fbid": ""
+  }
+}

@@ -1,0 +1,31 @@
+doctype
+html
+	head
+		meta(http-equiv="Content-Type" content="text/html" charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title #{title}
+		meta(property="fb:app_id" content="#{fbid}")
+		meta(property="og:type" content="website")
+		meta(property="og:title" content="#{title}")
+		meta(property="og:description" content="#{description}")
+		meta(property="og:site_name" content="#{sitename}")
+		meta(property="og:image" content="#{ogimage}")
+		meta(property="og:url" content="#{uri}#{slug}")
+		meta(property="og:locale" content="ja_jp")
+		meta(name="twitter:card" content="summary")
+		meta(name="twitter:site" content="@")
+		meta(name="twitter:domain" content="#{domain}")
+		meta(property="twitter:title" content="#{title}")
+		meta(property="twitter:description" content="#{description}")
+		link(rel="stylesheet" href="/css/main.css")
+		link(rel="stylesheet" href="/css/ie10-viewport-bug-workaround.css")
+		link(rel="stylesheet" href="/css/font-awesome.min.css")
+	body
+		!= partial("_partial/_navbar")
+		!= yield
+
+		!= partial("_partial/_footer")
+
+		script(src="/js/jquery.min.js")
+		script(src="/js/bootstrap.min.js")
+		script(src="/js/ie10-viewport-bug-workaround.js")

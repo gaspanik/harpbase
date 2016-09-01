@@ -1,0 +1,8 @@
+{
+  "about": {
+    "layout": "_layout-inner",
+    "title": "About Page",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "slug": "about.html"
+  }
+}

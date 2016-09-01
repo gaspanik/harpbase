@@ -1,0 +1,31 @@
+#site-carousel.carousel.slide
+	ol.carousel-indicators
+		li.active(data-target="#site-carousel", data-slide-to="0")
+		li(data-target="#site-carousel", data-slide-to="1")
+		li(data-target="#site-carousel", data-slide-to="2")
+	.carousel-inner(role="listbox")
+		.item.item-01.active
+			.container
+				.carousel-caption
+					h2 Lorem ipsum
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					p: a.btn.btn-sm.btn-primary link button
+
+		.item.item-02
+			.container
+				.carousel-caption
+					h2 Aenean commodo
+					p Aenean commodo ligula eget dolor. Aenean massa.
+					p: a.btn.btn-sm.btn-ghost link button
+
+		.item.item-03
+			.container
+				.carousel-caption
+					h2 Cum sociis natoque
+					p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					p: a.btn.btn-sm.btn-success link button
+
+	a.left.carousel-control(href="#site-carousel", data-slide="prev")
+		span.icon-prev
+	a.right.carousel-control(href="#site-carousel", data-slide="next")
+		span.icon-next

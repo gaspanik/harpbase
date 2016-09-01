@@ -1,0 +1,281 @@
+@import '../_less/bootstrap';
+
+// #Bootstrap Override Style
+
+@gray-base:              #222; // body color
+
+@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-warning:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+
+@font-family-sans-serif:  "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", "MS ゴシック", sans-serif;
+@font-family-serif:       serif;
+@font-family-monospace:   monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          17px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            29px;
+@font-size-h2:            24px;
+@font-size-h3:            20px;
+@font-size-h4:            @font-size-base;
+@font-size-h5:            @font-size-base;
+@font-size-h6:            16px;
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    inherit;
+@headings-font-weight:    bold;
+@headings-line-height:    1.2;
+@headings-color:          inherit;
+
+@line-height-base:        1.56; // 20/14
+@line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
+@line-height-small:         1.5;
+
+@border-radius-base:        3px;
+@border-radius-large:       4px;
+@border-radius-small:       2px;
+
+// Ghost button
+.btn-ghost {
+  .button-variant(#FFF; transparent; #FFF);
+  :hover {
+    .button-variant(#FFF; rgba(0, 0, 0, 0.2); #FFF);
+  }
+}
+
+// Grid width
+@grid-gutter-width:         32px;
+
+// Basics of a navbar
+@navbar-height:                    50px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-border-radius:             @border-radius-base;
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+@navbar-collapse-max-height:       340px;
+
+@navbar-default-color:             #FFF;
+@navbar-default-bg:                @brand-primary;
+@navbar-default-border:            none;
+
+// Navbar links
+@navbar-default-link-color:                #FFF;
+@navbar-default-link-hover-color:          #FFF;
+@navbar-default-link-hover-bg:             darken(@brand-primary, 5%);
+@navbar-default-link-active-color:         #FFF;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:            transparent;
+
+@navbar-default-toggle-hover-bg:           transparent;
+@navbar-default-toggle-icon-bar-bg:        #FFF;
+@navbar-default-toggle-border-color:       #FFF;
+
+// #Site Override Style
+
+// Inside page head padding
+.site-inner {
+  padding-top: 60px;
+}
+
+// No gutter column
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+// Block margin
+.container-margin {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+// Fixed full width
+body > .row.full-width {
+  margin: 0 auto;
+  &.container-margin {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+.row > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+// HR color
+.site-hr {
+  hr {
+    border-color: #f0f0f0;
+  }
+}
+
+// Navbar font size
+.site-navbar {
+  font-size: 15px;
+  .dropdown-menu {
+    font-size: 15px;
+  }
+}
+
+// Action
+.site-action {
+  margin: 0 auto;
+  background-color: @brand-warning;
+  padding: 1em 0;
+  p {
+    color: #FFF;
+    margin: 0;
+    line-height: 1.2;
+  }
+}
+
+// Footer
+.site-footer {
+  font-size: 15px;
+  padding: 2em 0;
+  background-color: #434955;
+  > [class*='col-'] {
+    margin-bottom: 1em;
+  }
+  p {
+    color: #c0c0c0;
+  }
+  a,
+  a:hover {
+    color: #FFF;
+  }
+}
+
+// Carousel base class
+.carousel {
+  height: 500px;
+  margin-bottom: 0;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 30%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: @carousel-caption-color;
+  text-align: left;
+  text-shadow: @carousel-text-shadow;
+  & .btn {
+    text-shadow: none; // No shadow for button elements in carousel-caption
+  }
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #FFF;
+}
+.carousel .item-01 {
+  background-image: url(http://lorempixel.com/1280/500/food/);
+}
+.carousel .item-02 {
+  background-image: url(http://lorempixel.com/1280/500/sports/);
+}
+.carousel .item-03 {
+  background-image: url(http://lorempixel.com/1280/500/nature/);
+}
+
+// Vertical align class
+@media (max-width: @screen-xs-max) {
+  .vertical-align > [class^="col-xs-"] {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
+@media (min-width: @screen-xs-min) {
+  .vertical-align {
+    display: flex;
+    flex-direction: row;
+  }
+  .vertical-align > [class^="col-"],
+  .vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Optional, to align inner items horizontally inside the column
+  }
+}
+
+// Text
+
+.site-lead {
+  margin: 32px auto;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: bold;
+  @media (min-width: @screen-sm-min) {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+  }
+}
+
+.site-highlight {
+  color: @brand-primary;
+}
+
+
+.site-section-heading {
+  margin: 0 auto 2em;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: left;
+  }
+  @media (min-width: @screen-sm-min) {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.site-featurette-section {
+  > [class*='col-'] {
+    margin-bottom: 2em;
+  }
+  img {
+    width: 75%;
+    max-width: 75%;
+    text-align: center;
+    margin: 0 auto 0.5em;
+  }
+}
+
+.text-subtext {
+  color: #555;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  margin-left: 0;
+  @media (min-width: @screen-sm-min) {
+    .text-subtext {
+      color: #555;
+      font-size: 12px;
+      display: inline-block;
+      margin-left: 1em;
+    }
+  }
+}
+

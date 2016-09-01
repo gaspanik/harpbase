@@ -1,0 +1,22 @@
+nav(role="navigation").navbar.navbar-default.navbar-fixed-top.site-navbar
+	.container
+		.navbar-header
+			button(type="button", data-toggle="collapse", data-target=".nabvar-collapse-menu").navbar-toggle.collapsed
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a(href="index.html" ).navbar-brand #{title}
+		.collapse.navbar-collapse.nabvar-collapse-menu
+			ul.nav.navbar-nav.navbar-right
+				li: a(href="/about.html")
+					i.fa.fa-sticky-note-o &nbsp;About
+				li.dropdown: a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+					i.fa.fa-list &nbsp;Dropdown
+						span.caret
+					ul.dropdown-menu(role="menu")
+						li: a(href="/") Dropdown A
+						li: a(href="/") Dropdown B
+						li: a(href="/") Dropdown C
+				li: a(href="/")
+					i.fa.fa-question-circle &nbsp;Contact
