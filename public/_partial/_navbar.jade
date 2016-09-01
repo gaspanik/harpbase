@@ -10,13 +10,16 @@ nav(role="navigation").navbar.navbar-default.navbar-fixed-top.site-navbar
 		.collapse.navbar-collapse.nabvar-collapse-menu
 			ul.nav.navbar-nav.navbar-right
 				li: a(href="/about.html")
-					i.fa.fa-sticky-note-o &nbsp;About
+					i.fa.fa-sticky-note-o.fa-left
+					| About
 				li.dropdown: a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
-					i.fa.fa-list &nbsp;Dropdown
-						span.caret
+					i.fa.fa-list.fa-left
+					| Dropdown
+					span.caret
 					ul.dropdown-menu(role="menu")
-						li: a(href="/") Dropdown A
-						li: a(href="/") Dropdown B
-						li: a(href="/") Dropdown C
+						li: a(href="/") Dropdown menu A
+						li: a(href="/") Dropdown menu B
+						li: a(href="/") Dropdown menu C
 				li: a(href="/")
-					i.fa.fa-question-circle &nbsp;Contact
+					i.fa.fa-question-circle.fa-left
+					| Contact

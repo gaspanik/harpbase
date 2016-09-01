@@ -1,8 +1,8 @@
 {
   "globals": {
-    "sitename": "web site name",
-    "title": "web page title | global",
-    "description": "web page descripton | global",
+    "sitename": "site name",
+    "title": "page title | global",
+    "description": "page descripton | global",
     "domain": "example.com",
     "uri": "http://example.com/",
     "slug": "index.html",

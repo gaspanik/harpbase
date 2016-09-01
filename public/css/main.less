@@ -81,6 +81,24 @@
 @navbar-default-toggle-icon-bar-bg:        #FFF;
 @navbar-default-toggle-border-color:       #FFF;
 
+
+//## Dropdown menu container and contents.
+@dropdown-bg:                    rgba(255,255,255,.85);;
+@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-fallback-border:       #ccc;
+@dropdown-divider-bg:            #e5e5e5;
+
+@dropdown-link-color:            @gray-dark;
+@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+@dropdown-link-hover-bg:         #f5f5f5;
+
+@dropdown-link-active-color:     @component-active-color;
+@dropdown-link-active-bg:        @component-active-bg;
+
+@dropdown-link-disabled-color:   @gray-light;
+@dropdown-header-color:          @gray-light;
+
+
 // #Site Override Style
 
 // Inside page head padding
@@ -120,12 +138,12 @@ body > .row.full-width {
   }
 }
 
-// Navbar font size
-.site-navbar {
-  font-size: 15px;
-  .dropdown-menu {
-    font-size: 15px;
-  }
+// Font Awesome right margin
+.fa-right {
+  margin-left: 8px;
+}
+.fa-left {
+  margin-right: 8px;
 }
 
 // Action
@@ -187,13 +205,13 @@ body > .row.full-width {
   background-color: #FFF;
 }
 .carousel .item-01 {
-  background-image: url(http://lorempixel.com/1280/500/food/);
+  background-image: url(/images/14569024543_bf716d116f_k.jpg);
 }
 .carousel .item-02 {
-  background-image: url(http://lorempixel.com/1280/500/sports/);
+  background-image: url(/images/13576616433_6661b3b4bf_k.jpg);
 }
 .carousel .item-03 {
-  background-image: url(http://lorempixel.com/1280/500/nature/);
+  background-image: url(/images/14115133923_818c5d177b_k.jpg);
 }
 
 // Vertical align class
@@ -219,6 +237,24 @@ body > .row.full-width {
 
 // Text
 
+blockquote {
+  p {
+    line-height: 1.3;
+    padding: 0;
+  }
+  cite {
+    margin: 0 auto 1em;
+    font-size: @font-size-small;
+  }
+}
+
+.site-navbar {
+  font-size: 15px;
+  .dropdown-menu {
+    font-size: 15px;
+  }
+}
+
 .site-lead {
   margin: 32px auto;
   text-align: justify;
@@ -235,7 +271,6 @@ body > .row.full-width {
   color: @brand-primary;
 }
 
-
 .site-section-heading {
   margin: 0 auto 2em;
   h2 {
@@ -248,6 +283,32 @@ body > .row.full-width {
     p {
       text-align: center;
     }
+  }
+}
+
+.site-heading-primary {
+  color: @brand-primary;
+}
+
+.site-column-section {
+  > [class*='col-'] {
+    margin-bottom: 2em;
+  }
+  img {
+    width: 75%;
+    max-width: 75%;
+    text-align: center;
+    margin: 0 auto 0.5em;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
+  p.site-column-button {
+    text-align: center;
+    margin: 1em auto;
   }
 }
 
