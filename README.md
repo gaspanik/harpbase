@@ -1,8 +1,13 @@
 # Harp Base
 
+## Requirements
+
+* [Harp](http://harpjs.com/)
+* [jstransformer-marked](https://www.npmjs.com/package/jstransformer-marked)
+
 ## Getting started
 
-1. Install Harp.
+1. Install Harp and jstransformer-marked.
 2. Clone this repository.
 3. Start `harp server`.
 
